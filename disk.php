@@ -19,10 +19,10 @@
             <div class="menu">
                 <div><a href="index.html">Domů</a></div>
                 <div><a href="disk.php">Disk</a></div>
-                <div><a href="upload.php">Nahrát Model</a></div>
+                <div><a href="upload.html">Nahrát Model</a></div>
             </div>
             </nav>
-            <div class="button"> <a href="upload.php">Nahrát Model</a> </div>
+            <div class="button"> <a href="upload.html">Nahrát Model</a> </div>
         </div>
         <hr>
         <h3>Tvůj Disk</h3>
