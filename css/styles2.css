@@ -1,0 +1,20 @@
+#hamburger, label {
+    display: none;
+}
+
+label {
+    display: block;
+}
+
+nav {
+    display: none;
+    width: 40%;
+
+}
+
+#hamburger:checked ~ nav {
+    margin-top: 20px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
