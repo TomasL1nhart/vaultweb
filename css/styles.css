@@ -61,8 +61,18 @@ body {
     to { width: 100% }
   }
 
-  .container2 {
-    margin-top: 100vh; 
-    padding: 20px;
-    text-align: center;
-}
+  @media screen and (max-width: 700px) {
+    .header {
+        font-size: 40px;
+    }
+    .header2 {
+        font-size: 35px;
+        margin-top: -80px;
+    }
+    .button {
+    a {
+        padding: 15px 40px; 
+        font-size: 20px;
+    }
+    }
+  }
