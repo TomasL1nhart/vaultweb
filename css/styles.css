@@ -21,7 +21,7 @@ body {
     text-align: center;
     margin-top: 50px;
     color: rgb(255, 255, 255);
-    text-shadow: 2px 3px 5px rgba(0, 0, 0, 1); 
+    text-shadow: 2px 6px 5px rgba(0, 0, 0, 1); 
 }
 
 .header2 {
@@ -60,3 +60,9 @@ body {
     from { width: 0 }
     to { width: 100% }
   }
+
+  .container2 {
+    margin-top: 100vh; 
+    padding: 20px;
+    text-align: center;
+}
