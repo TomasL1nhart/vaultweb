@@ -17,15 +17,15 @@ body {
 }
 
 .header {
-    font-size: 60px;
+    font-size: 75px;
     text-align: center;
     margin-top: 50px;
-    color: rgb(255, 255, 255);
+    color: white;
     text-shadow: 2px 6px 5px rgba(0, 0, 0, 1); 
 }
 
 .header2 {
-    font-size: 55px;
+    font-size: 65px;
     text-align: center;
     margin-top: -110px;
     color: #e4e4e4; 
@@ -43,7 +43,7 @@ body {
         padding: 15px 55px; 
         background-color: #757575; 
         color: white;
-        font-size: 25px;
+        font-size: 35px;
         font-weight: bold;
         text-decoration: none;
         border-radius: 4px;
@@ -61,7 +61,8 @@ body {
     to { width: 100% }
   }
 
-  @media screen and (max-width: 700px) {
+  
+  @media screen and (max-width: 850px) {
     .header {
         font-size: 45px;
     }
