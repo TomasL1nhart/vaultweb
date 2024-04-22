@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nimbus+Sans+L:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles3.css">
+    <title>Upload</title>
+    <link rel="icon" type="image/x-icon" href="img/main.ico">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger">
+            &#9776;
+        </label>
+        <nav>
+        <div class="menu">
+            <div><a href="index.html">Domů</a></div>
+            <div><a href="disk.php">Disk</a></div>
+            <div><a href="upload.html">Nahrát Model</a></div>
+        </div>
+        </nav>
+        <h2>Nahrát nový Model</h2>
+        <div class="image-container">
+            <img src="img/upload.svg" alt="uploading" id="image" />
+            <form id="uploadForm" action="upload.php" method="post" enctype="multipart/form-data">
+              <input type="file" name="file" id="file-input" />
+            </form>
+          </div>
+        <h3>Přetáhni nebo Vyhledej</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

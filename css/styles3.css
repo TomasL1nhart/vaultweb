@@ -1,0 +1,59 @@
+body {
+  font-family: 'Nimbus Sans L', sans-serif;
+}
+
+#hamburger, label {
+    display: none;
+}
+
+label {
+    display: block;
+}
+
+nav {
+    display: none;
+    width: 40%;
+
+}
+
+#hamburger:checked ~ nav {
+    margin-top: 20px;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #3b3b3b;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
+img {
+    width: 800px;
+    border: 1px dashed #8f8f8f;
+}
+  
+.image-container {
+  position: relative;
+  width: 800px;
+  height: 405px;
+}
+
+#file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-container:hover #file-input {
+  pointer-events: auto;
+}
