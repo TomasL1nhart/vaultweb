@@ -20,7 +20,7 @@ body {
 
 .bg {
     background-color: #e6e6e6;
-    height: 65rem;
+    height: 55rem;
 }
 
 hr {
@@ -56,7 +56,7 @@ hr {
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; 
+    gap: 20px; 
 }
 
 .circle {
@@ -87,18 +87,6 @@ hr {
     align-items: center;
 }
 
-.footer {
-    align-items: center;
-    text-align: center; 
-    background-color: #303030;
-    color: #fff;
-    padding: 1px 0;
-}
-
-.footer p {
-    color: #c9c9c9;
-}
-
 .button {
     margin-top: 50px;
     a {
@@ -118,6 +106,18 @@ hr {
     background-color: #555555;
 }
 
+.footer {
+    align-items: center;
+    text-align: center; 
+    background-color: #303030;
+    color: #fff;
+    padding: 1px 0;
+}
+
+.footer p {
+    color: #c9c9c9;
+}
+
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
@@ -126,11 +126,11 @@ hr {
   
   @media screen and (max-width: 850px) {
     .header {
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .header2 {
-        font-size: 40px;
+        font-size: 45px;
         margin-top: -80px;
         animation: 
         typing 1.5s steps(50, end),
