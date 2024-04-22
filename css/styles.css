@@ -15,7 +15,7 @@ body {
 .background-image {
     position: fixed;
     object-fit: cover;
-    z-index: -2;
+    z-index: -1;
 }
 
 .bg {
