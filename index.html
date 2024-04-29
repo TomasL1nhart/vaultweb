@@ -9,9 +9,26 @@
     <title>Domov</title>
     <link rel="icon" type="image/x-icon" href="img/main.ico">
 </head>
-
+    <script>
+        function scrollToAbout() {
+            document.querySelector('.cast2').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
 <body>
     <div class="cast1">
+        <nav class="menu">
+            <div class="menu-button">
+                <a href="disk.html">Disk</a>
+            </div>
+            <div class="menu-button">
+                <a href="upload.html">Nahrát modely</a>
+            </div>
+            <div class="menu-button">
+                <a href="#" onclick="scrollToAbout()">O nás</a>
+            </div>
+        </nav>
         <img src="img/main.png" alt="hlavni" class="background-image">
         <div class="header">
             <h2>Ukládej modely.</h2>
