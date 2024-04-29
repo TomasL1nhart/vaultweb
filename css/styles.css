@@ -10,13 +10,13 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center; 
-    min-height: 75em;
+    min-height: 40em;
 }
 
 .menu {
     display: flex;
     background-color: #303030;
-    padding: 1.5em 0;
+    padding: 1em 0;
     width: 100%;
     justify-content: flex-end;
     position: absolute;
@@ -45,11 +45,8 @@ body {
 
 .background-image {
     position: fixed;
-<<<<<<< HEAD
-=======
     height: 90em;
     object-fit: cover;
->>>>>>> a11bbdfbec523155bd09e591e25553b88542a6d6
     z-index: -1;
 }
 
