@@ -1,2 +1,0 @@
-# vaultweb
-skolni webin

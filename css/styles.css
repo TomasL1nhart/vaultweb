@@ -16,7 +16,7 @@ body {
 .menu {
     display: flex;
     background-color: #303030;
-    padding: 1em 0;
+    padding: 1.3em 0;
     width: 100%;
     justify-content: flex-end;
     position: absolute;
@@ -41,6 +41,15 @@ body {
     padding: 0.5em 0em;
     border-radius: 4px;
 }
+
+.logo-img {
+    height: 4.5em;
+    position: absolute;
+    left: 1em;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
 
 
 .background-image {
