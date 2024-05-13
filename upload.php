@@ -1,36 +1,44 @@
 <?php
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $link = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+include('config.php');
+if(isset($_POST['submit'])) {
+$file_name = $_FILES['image']['name'];
+$tempname = $_FILES['image']['tmp_name'];
+$folder = 'Uploads/'.$file_name;
 
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Prepare and bind the data
-    $stmt = $conn->prepare("INSERT INTO files (file_name, file_path) VALUES (?, ?)");
-    $stmt->bind_param("ss", $file_name, $file_path);
-
-    // Variables to store file data
-    $file_name = $_FILES['file']['name'];
-    $file_path = "uploads/" . basename($_FILES['file']['name']); // Change 'uploads/' to your desired folder
-
-    // Move uploaded file to the desired location
-    if (move_uploaded_file($_FILES['file']['tmp_name'], $file_path)) {
-        // Insert file details into the database
-        if ($stmt->execute()) {
-            echo "File uploaded successfully.";
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-    } else {
-        echo "Error uploading file.";
-    }
-
-    // Close statement and connection
-    $stmt->close();
-    $conn->close();
+$query = mysqli_query($con, "Insert into models (file) values ('$file_name')");
+if(move_uploaded_file($tempname, $folder)) {
+echo "<h2>File uploaded successfully</h2>"; 
+} else {
+echo "<h2>File uploaded successfully</h2>";
+}
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nimbus+Sans+L:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles3.css">
+    <title>Upload</title>
+    <link rel="icon" type="image/x-icon" href="img/main.ico">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger">
+            &#9776;
+        </label>
+        <h2>Nahrát nový Model</h2>
+        <div class="image-container">
+            <img src="img/upload.svg" alt="uploading" id="image" />
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+              <input type="file" name="image" id="file-input" />
+              <button type="submit" name="submit">Submit</button>
+            </form>
+          </div>
+        <h3>Přetáhni nebo Vyhledej</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
