@@ -14,19 +14,19 @@ if(isset($_POST['submit'])) {
     }
 
     if ($_FILES['model']['error'] !== UPLOAD_ERR_OK) {
-        echo "<h4>An error occurred during file upload. Please try again.</h4>";
+        echo "<h4>Objevil se error.</h4>";
         exit;
     }
 
     if(move_uploaded_file($tempname, $folder)) {
         $query = mysqli_query($con, "INSERT INTO models (file) VALUES ('$file_name')");
         if ($query) {
-            echo "<h4>File uploaded successfully and database updated.</h4>";
+            echo "<h4>Soubor nahrán.</h4>";
         } else {
-            echo "<h4>Failed to update the database.</h4>";
+            echo "<h4>Soubor nebyl nahrán.</h4>";
         }
     } else {
-        echo "<h4>Failed to upload the file. Please check the folder permissions.</h4>";
+        echo "<h4>Soubor nemůže být nahrán.</h4>";
     }
 }
 ?>
