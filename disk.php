@@ -9,22 +9,19 @@
     <link rel="icon" type="image/x-icon" href="img/main.ico">
 </head>
 <body>
-    <div class="container">
-        <div class="bgup">
-            <input type="checkbox" id="hamburger">
-            <label for="hamburger">
-                &#9776;
-            </label>
-            <nav>
-            <div class="menu">
-                <div><a href="index.html">Domů</a></div>
-                <div><a href="disk.php">Disk</a></div>
-                <div><a href="upload.html">Nahrát Model</a></div>
-            </div>
-            </nav>
-            <div class="button"> <a href="upload.html">Nahrát Model</a> </div>
+<nav class="menu">
+        <img src="img/logo.png" alt="logo" class="logo-img">
+        <div class="menu-button">
+            <a href="disk.html">Disk</a>
         </div>
-        <hr>
+        <div class="menu-button">
+            <a href="upload.html">Nahrát modely</a>
+        </div>
+        <div class="menu-button">
+            <a href="index.html#about">O nás</a>
+        </div>
+    </nav>
+    <div class="container">
         <h3>Tvůj Disk</h3>
     </div>
 </body>
