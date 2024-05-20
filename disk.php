@@ -12,10 +12,10 @@
 <nav class="menu">
         <img src="img/logo.png" alt="logo" class="logo-img">
         <div class="menu-button">
-            <a href="disk.html">Disk</a>
+            <a href="disk.php">Disk</a>
         </div>
         <div class="menu-button">
-            <a href="upload.html">Nahrát modely</a>
+            <a href="upload.php">Nahrát modely</a>
         </div>
         <div class="menu-button">
             <a href="index.html#about">O nás</a>
@@ -24,5 +24,10 @@
     <div class="container">
         <h3>Tvůj Disk</h3>
     </div>
+            <footer class="footer">
+                <h4>Vault Web</h4>
+                <p>Vytvořeno v 2024</p>
+            </div>
+            <
 </body>
 </html>

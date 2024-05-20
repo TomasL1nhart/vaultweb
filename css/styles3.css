@@ -1,5 +1,48 @@
 body {
   font-family: 'Nimbus Sans L', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 200em;
+  padding-top: 4em;
+}
+
+.menu {
+  display: flex;
+  background-color: #303030;
+  padding: 1.3em 0;
+  width: 100%;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+}
+
+.menu-button {
+  margin: 0 3em; 
+}
+
+.menu-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button a:hover {
+  background-color: #555555;
+  padding: 0.5em 0em;
+  border-radius: 4px;
+}
+
+.logo-img {
+  height: 4.5em;
+  position: absolute;
+  left: 1em;
+  top: 45%;
+  transform: translateY(-50%);
 }
 
 h2 {
@@ -11,11 +54,11 @@ h3 {
   font-size: 1.5rem;
 }
 
-img {
-    width: 50em;
-    border: 1px dashed #8f8f8f;
+#image {
+  width: 50em;
+  border: 1px dashed #8f8f8f;
 }
-  
+
 .image-container {
   position: relative;
   width: 800px;
@@ -34,4 +77,16 @@ img {
 
 .image-container:hover #file-input {
   pointer-events: auto;
+}
+
+.footer {
+  align-items: center;
+  text-align: center; 
+  background-color: #303030;
+  color: #fff;
+  padding: 0.5em 0;
+}
+
+.footer p {
+  color: #c9c9c9;
 }

@@ -42,11 +42,19 @@ if(isset($_POST['submit'])) {
     <link rel="icon" type="image/x-icon" href="img/main.ico">
 </head>
 <body>
+<nav class="menu">
+        <img src="img/logo.png" alt="logo" class="logo-img">
+        <div class="menu-button">
+            <a href="disk.php">Disk</a>
+        </div>
+        <div class="menu-button">
+            <a href="upload.php">Nahrát modely</a>
+        </div>
+        <div class="menu-button">
+            <a href="index.html#about">O nás</a>
+        </div>
+    </nav>
     <div class="container">
-        <input type="checkbox" id="hamburger">
-        <label for="hamburger">
-            &#9776;
-        </label>
         <h2>Nahrát nový Model</h2>
         <div class="image-container">
             <img src="img/upload.svg" alt="uploading" id="image" />
@@ -54,9 +62,15 @@ if(isset($_POST['submit'])) {
               <input type="file" name="model" id="file-input" />
               <button type="submit" name="submit">Submit</button>
             </form>
-          </div>
+        </div>
         <h3>Přetáhni nebo Vyhledej</h3>
     </div>
+    <footer class="footer">
+                <h4>Vault Web</h4>
+                <p>Vytvořeno v 2024</p>
+            </div>
+            </footer>
+</div>
     <script src="script.js"></script>
 </body>
 </html>

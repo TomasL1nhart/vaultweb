@@ -44,3 +44,15 @@ body {
     top: 45%;
     transform: translateY(-50%);
 }
+
+.footer {
+    align-items: center;
+    text-align: center; 
+    background-color: #303030;
+    color: #fff;
+    padding: 0.2em 0;
+}
+
+.footer p {
+    color: #c9c9c9;
+}
