@@ -28,6 +28,5 @@
                 <h4>Vault Web</h4>
                 <p>Vytvořeno v 2024</p>
             </div>
-            <
 </body>
 </html>

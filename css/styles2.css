@@ -6,6 +6,7 @@ body {
 
 .container {
     padding-top: 4em;
+    height: auto;
 }
 
 .menu {
@@ -50,7 +51,7 @@ body {
     text-align: center; 
     background-color: #303030;
     color: #fff;
-    padding: 0.2em 0;
+    padding: 0.1em;
 }
 
 .footer p {

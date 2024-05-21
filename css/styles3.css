@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  height: 200em;
+  height: 45em;
   padding-top: 4em;
 }
 
@@ -84,7 +84,7 @@ h3 {
   text-align: center; 
   background-color: #303030;
   color: #fff;
-  padding: 0.5em 0;
+  padding: 0.1em;
 }
 
 .footer p {
