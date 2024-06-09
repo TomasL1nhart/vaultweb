@@ -46,17 +46,39 @@ if(isset($_POST['submit'])) {
 <nav class="menu">
         <a href="index.html">
             <img src="img/logo.svg" alt="logo" class="logo-img">
-        </a> 
-        <div class="menu-button">
-            <a href="disk.php">Disk</a>
+        </a>        
+        <div class="hamburger" onclick="toggleMenu(true)">
+            &#9776;
         </div>
-        <div class="menu-button">
-            <a href="upload.php">Nahrát modely</a>
-        </div>
-        <div class="menu-button">
-            <a href="index.html#about">O nás</a>
+        <div class="menu-buttons" id="menuButtons">
+            <div class="menu-button">
+                <a href="disk.php">Disk</a>
+            </div>
+            <div class="menu-button">
+                <a href="upload.php">Nahrát modely</a>
+            </div>
+            <div class="menu-button">
+                <a href="index.html#about" onclick="hideMenu()">O nás</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        function toggleMenu(toggle) {
+            var menuButtons = document.getElementById("menuButtons");
+            if (toggle !== undefined) {
+                menuButtons.classList.toggle("active", toggle);
+            } else {
+                menuButtons.classList.toggle("active");
+            }
+        }
+
+        function hideMenu() {
+            var menuButtons = document.getElementById("menuButtons");
+            menuButtons.classList.remove("active");
+        }
+    </script>
+    
     <div class="container">
     <h2>Nahrát nový Model</h2>
     <div class="image-container">
@@ -70,11 +92,11 @@ if(isset($_POST['submit'])) {
     </div>
     <h3>Přetáhni nebo Vyhledej</h3>
 </div>
-    <footer class="footer">
-                <h4>Vault Web</h4>
-                <p>Vytvořeno v 2024</p>
-            </div>
-            </footer>
+<footer class="footer">
+        <h4>Vault Web</h4>
+        <p>Vytvořeno v 2024</p>
+    </div>
+</footer>
 </div>
 
 

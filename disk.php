@@ -12,17 +12,39 @@
 <nav class="menu">
         <a href="index.html">
             <img src="img/logo.svg" alt="logo" class="logo-img">
-        </a> 
-        <div class="menu-button">
-            <a href="disk.php">Disk</a>
+        </a>        
+        <div class="hamburger" onclick="toggleMenu(true)">
+            &#9776;
         </div>
-        <div class="menu-button">
-            <a href="upload.php">Nahrát modely</a>
-        </div>
-        <div class="menu-button">
-            <a href="index.html#about">O nás</a>
+        <div class="menu-buttons" id="menuButtons">
+            <div class="menu-button">
+                <a href="disk.php">Disk</a>
+            </div>
+            <div class="menu-button">
+                <a href="upload.php">Nahrát modely</a>
+            </div>
+            <div class="menu-button">
+                <a href="index.html#about" onclick="hideMenu()">O nás</a>
+            </div>
         </div>
     </nav>
+
+    <script>
+        function toggleMenu(toggle) {
+            var menuButtons = document.getElementById("menuButtons");
+            if (toggle !== undefined) {
+                menuButtons.classList.toggle("active", toggle);
+            } else {
+                menuButtons.classList.toggle("active");
+            }
+        }
+
+        function hideMenu() {
+            var menuButtons = document.getElementById("menuButtons");
+            menuButtons.classList.remove("active");
+        }
+    </script>
+    
     <div class="container">
         <br><br>
         <h3>Tvůj Disk</h3>
@@ -32,7 +54,7 @@
     
             foreach($files as $file) {
                 $filename = basename($file);
-                $upload_time = date("Y-m-d H:i:s", filemtime($file)); // Get upload time
+                $upload_time = date("Y-m-d H:i:s", filemtime($file));
                 ?>
                 <div class="file-box">
                     <div class="file-details">

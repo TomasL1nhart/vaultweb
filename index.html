@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Domov</title>
     <link rel="icon" type="image/x-icon" href="img/main.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="cast1">
@@ -15,10 +16,10 @@
         <a href="index.html">
             <img src="img/logo.svg" alt="logo" class="logo-img">
         </a>        
-        <div class="hamburger" onclick="toggleMenu()">
+        <div class="hamburger" onclick="toggleMenu(true)">
             &#9776;
         </div>
-        <div class="menu-buttons">
+        <div class="menu-buttons" id="menuButtons">
             <div class="menu-button">
                 <a href="disk.php">Disk</a>
             </div>
@@ -26,10 +27,27 @@
                 <a href="upload.php">Nahrát modely</a>
             </div>
             <div class="menu-button">
-                <a href="index.html#about">O nás</a>
+                <a href="index.html#about" onclick="hideMenu()">O nás</a>
             </div>
         </div>
     </nav>
+
+    <script>
+        function toggleMenu(toggle) {
+            var menuButtons = document.getElementById("menuButtons");
+            if (toggle !== undefined) {
+                menuButtons.classList.toggle("active", toggle);
+            } else {
+                menuButtons.classList.toggle("active");
+            }
+        }
+
+        function hideMenu() {
+            var menuButtons = document.getElementById("menuButtons");
+            menuButtons.classList.remove("active");
+        }
+    </script>
+
         <img src="img/main.png" alt="hlavni" class="background-image">
         <div class="header">
             <h2>Ukládej modely.</h2>
