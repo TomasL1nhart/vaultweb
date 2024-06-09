@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nimbus+Sans+L:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles3.css">
+    <title>Upload</title>
+    <link rel="icon" type="image/x-icon" href="img/main.ico">
+</head>
+<body>
 <?php
 include('config.php');
 
@@ -9,7 +20,7 @@ if(isset($_POST['submit'])) {
     $allowed_extensions = array('obj', 'fbx', 'glbf');
     $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
     if(!in_array(strtolower($file_extension), $allowed_extensions)) {
-        echo "<h4>Toto nejde nahrát, špatný formát. Jenom OBJ, FBX, GLBF soubory jsou povoleny.</h4>";
+        echo "<div class='error'>Toto nejde nahrát, špatný formát. Jenom OBJ, FBX, GLBF soubory jsou povoleny.</div>";
         exit;
     }
 
@@ -31,19 +42,11 @@ if(isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Nimbus+Sans+L:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles3.css">
-    <title>Upload</title>
-    <link rel="icon" type="image/x-icon" href="img/main.ico">
-</head>
-<body>
+
 <nav class="menu">
-        <img src="img/logo.png" alt="logo" class="logo-img">
+        <a href="index.html">
+            <img src="img/logo.svg" alt="logo" class="logo-img">
+        </a> 
         <div class="menu-button">
             <a href="disk.php">Disk</a>
         </div>
@@ -55,22 +58,42 @@ if(isset($_POST['submit'])) {
         </div>
     </nav>
     <div class="container">
-        <h2>Nahrát nový Model</h2>
-        <div class="image-container">
+    <h2>Nahrát nový Model</h2>
+    <div class="image-container">
+        <div class="image-wrapper">
             <img src="img/upload.svg" alt="uploading" id="image" />
-            <form id="uploadForm" method="post" enctype="multipart/form-data">
-              <input type="file" name="model" id="file-input" />
-              <button type="submit" name="submit">Submit</button>
-            </form>
         </div>
-        <h3>Přetáhni nebo Vyhledej</h3>
+        <form id="uploadForm" method="post" enctype="multipart/form-data">
+            <input type="file" name="model" id="file-input" /><br><br>
+            <button type="submit" name="submit" id="submitBtn">Poslat</button>
+        </form>
     </div>
+    <h3>Přetáhni nebo Vyhledej</h3>
+</div>
     <footer class="footer">
                 <h4>Vault Web</h4>
                 <p>Vytvořeno v 2024</p>
             </div>
             </footer>
 </div>
-    <script src="script.js"></script>
+
+
+<script>
+var fileInput = document.getElementById('file-input');
+var submitBtn = document.getElementById('submitBtn');
+
+function updateButtonColor() {
+    if (fileInput.files.length > 0) {
+        submitBtn.style.backgroundColor = '#28a745'; 
+        submitBtn.style.color = 'white'; 
+    } else {
+        submitBtn.style.backgroundColor = '#dc3545'; 
+        submitBtn.style.color = 'white'; 
+    }
+}
+updateButtonColor();
+fileInput.addEventListener('change', updateButtonColor);
+</script>
+
 </body>
 </html>

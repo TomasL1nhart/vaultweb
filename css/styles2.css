@@ -4,15 +4,21 @@ body {
     padding: 0;
 }
 
+h3 {
+    margin: 0.5em;
+    font-size: 2em;
+}
+
 .container {
     min-height: 84vh;
     padding-top: 4em;
+    text-decoration: none;
 }
 
 .menu {
     display: flex;
     background-color: #303030;
-    padding: 1.3em 0;
+    padding: 1.5em 0;
     width: 100%;
     justify-content: flex-end;
     position: absolute;
@@ -46,6 +52,11 @@ body {
     transform: translateY(-50%);
 }
 
+.folder-icon {
+    height: 8em; 
+    width: 8em;
+}
+
 .file-box {
     width: 15em;
     height: 15em;
@@ -66,6 +77,18 @@ body {
     left: 0;
     right: 0;
     line-height: 1.5;
+}
+
+.download-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition: color 0.2s ease;
+}
+
+.download-link a:hover {
+    color: rgb(76, 93, 143);
 }
 
 .footer {

@@ -16,10 +16,10 @@ body {
 .menu {
     display: flex;
     background-color: #303030;
-    padding: 1.3em 0;
+    padding: 1.5em 0;
     width: 100%;
-    justify-content: space-between;
-    position: fixed;
+    justify-content: flex-end; 
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -53,7 +53,7 @@ body {
     height: 4.5em;
     position: absolute;
     left: 1em;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
 }
 
@@ -153,11 +153,15 @@ body {
 }
 
 .footer {
-    align-items: center;
-    text-align: center; 
-    background-color: #303030;
-    color: #fff;
-    padding: 0.5em 0;
+    background-color: #333;
+    color: white;
+    padding: 1.9em;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer h4, .footer p {
+    margin: 0; 
 }
 
 .footer p {

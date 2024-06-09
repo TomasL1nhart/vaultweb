@@ -10,7 +10,9 @@
 </head>
 <body>
 <nav class="menu">
-        <img src="img/logo.png" alt="logo" class="logo-img">
+        <a href="index.html">
+            <img src="img/logo.svg" alt="logo" class="logo-img">
+        </a> 
         <div class="menu-button">
             <a href="disk.php">Disk</a>
         </div>
@@ -22,29 +24,29 @@
         </div>
     </nav>
     <div class="container">
-    <h3>Tvůj Disk</h3>
+        <br><br>
+        <h3>Tvůj Disk</h3>
         <?php
-        $directory = "Uploads/"; // Assuming your files are in this directory
+        $directory = "Uploads/";
         $files = glob($directory . "*");
-        
-        foreach($files as $file) {
-            $filename = basename($file);
-            $upload_time = date("Y-m-d H:i:s", filemtime($file)); // Get upload time
-            $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION)); // Get file extension
-            
-            echo "<div class='file-box" . ($file_extension == 'mp4' ? ' video' : '') . "'>";
-            echo "<div class='file-details'>";
-            if ($file_extension == 'mp4') {
-                echo "<div class='video-container'><video controls><source src='$file' type='video/mp4'>Your browser does not support the video tag.</video></div>";
-            } else {
-                echo "<div class='download-link'><a href='$file' download>Stáhnout</a></div>"; // Download link
+    
+            foreach($files as $file) {
+                $filename = basename($file);
+                $upload_time = date("Y-m-d H:i:s", filemtime($file)); // Get upload time
+                ?>
+                <div class="file-box">
+                    <div class="file-details">
+                        <img src="img/folder.svg" alt="Folder Icon" class="folder-icon">
+                        <hr>
+                        <div class="file-name"><?php echo (strlen($filename) > 15 ? substr($filename, 0, 15) . '..' : $filename); ?></div>
+                        <div class="upload-time">Nahráno: <?php echo $upload_time; ?></div>
+                        <div class="download-link"><a href="<?php echo $file; ?>" download>Stáhnout</a></div>
+                    </div>
+                </div>
+                <?php
             }
-            echo "<div class='file-name'>" . (strlen($filename) > 18 ? substr($filename, 0, 18) . '..' : $filename) . "</div>";
-            echo "<div class='upload-time'>Uploaded: " . $upload_time . "</div>";
-            echo "</div>";
-            echo "</div>";
-        }
-        ?>
+            ?>          
+    </div>
     </div>
     <footer class="footer">
         <h4>Vault Web</h4>
