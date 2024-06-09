@@ -5,8 +5,8 @@ body {
 }
 
 .container {
+    min-height: 84vh;
     padding-top: 4em;
-    height: auto;
 }
 
 .menu {
@@ -46,12 +46,38 @@ body {
     transform: translateY(-50%);
 }
 
+.file-box {
+    width: 15em;
+    height: 15em;
+    background-color: #f0f0f0;
+    margin: 0.5em;
+    display: inline-block;
+    text-align: center;
+    padding-top: 1.5em;
+    position: relative;
+    border: 0.5px solid black;
+    border-radius: 8px;
+}
+
+
+.file-details {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+    line-height: 1.5;
+}
+
 .footer {
-    align-items: center;
-    text-align: center; 
-    background-color: #303030;
-    color: #fff;
-    padding: 0.1em;
+    background-color: #333;
+    color: white;
+    padding: 1.9em;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer h4, .footer p {
+    margin: 0; 
 }
 
 .footer p {

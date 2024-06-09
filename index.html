@@ -9,17 +9,26 @@
     <title>Domov</title>
     <link rel="icon" type="image/x-icon" href="img/main.ico">
 </head>
-    <script>
-        function scrollToAbout() {
-            document.querySelector('.cast2').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    </script>
+<    <script>
+    function scrollToAbout() {
+        document.querySelector('#about').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    function toggleMenu() {
+        document.querySelector('.menu').classList.toggle('active');
+    }
+</script>
+</head>
 <body>
-    <div class="cast1">
-        <nav class="menu">
-            <img src="img/logo.png" alt="logo" class="logo-img">
+<div class="cast1">
+    <nav class="menu">
+        <img src="img/logo.svg" alt="logo" class="logo-img">
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+        <div class="menu-buttons">
             <div class="menu-button">
                 <a href="disk.php">Disk</a>
             </div>
@@ -29,7 +38,8 @@
             <div class="menu-button">
                 <a href="#" onclick="scrollToAbout()">O nás</a>
             </div>
-        </nav>
+        </div>
+    </nav>
         <img src="img/main.png" alt="hlavni" class="background-image">
         <div class="header">
             <h2>Ukládej modely.</h2>

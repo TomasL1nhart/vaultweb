@@ -22,11 +22,33 @@
         </div>
     </nav>
     <div class="container">
-        <h3>Tvůj Disk</h3>
+    <h3>Tvůj Disk</h3>
+        <?php
+        $directory = "Uploads/"; // Assuming your files are in this directory
+        $files = glob($directory . "*");
+        
+        foreach($files as $file) {
+            $filename = basename($file);
+            $upload_time = date("Y-m-d H:i:s", filemtime($file)); // Get upload time
+            $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION)); // Get file extension
+            
+            echo "<div class='file-box" . ($file_extension == 'mp4' ? ' video' : '') . "'>";
+            echo "<div class='file-details'>";
+            if ($file_extension == 'mp4') {
+                echo "<div class='video-container'><video controls><source src='$file' type='video/mp4'>Your browser does not support the video tag.</video></div>";
+            } else {
+                echo "<div class='download-link'><a href='$file' download>Stáhnout</a></div>"; // Download link
+            }
+            echo "<div class='file-name'>" . (strlen($filename) > 18 ? substr($filename, 0, 18) . '..' : $filename) . "</div>";
+            echo "<div class='upload-time'>Uploaded: " . $upload_time . "</div>";
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
-            <footer class="footer">
-                <h4>Vault Web</h4>
-                <p>Vytvořeno v 2024</p>
-            </div>
+    <footer class="footer">
+        <h4>Vault Web</h4>
+        <p>Vytvořeno v 2024</p>
+    </footer>
 </body>
 </html>
